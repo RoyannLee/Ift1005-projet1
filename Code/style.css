@@ -16,17 +16,14 @@ nav {
     background: rgba(10, 10, 10, 0.6);
     justify-content: space-between;
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
     height: 20px;
+    margin-bottom: 50px;
 }
 
 .left_nav {
     display: flex;
     gap: 20px;
     align-items: center;
-=======
-    margin-bottom: 50px;
->>>>>>> 2e28989b9a2707c460304af32ed143113405b002
 }
 
 a {
@@ -38,10 +35,7 @@ nav a {
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
-<<<<<<< HEAD
     padding: 10px 16px; 
     height: 100%;
 }
-=======
-}
->>>>>>> 2e28989b9a2707c460304af32ed143113405b002
+
