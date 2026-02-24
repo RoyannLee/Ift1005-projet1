@@ -2,7 +2,7 @@ body {
     height: 3000px;
     background: linear-gradient(to bottom, #ffffff 0%, #888 51%, #0a0a0a 85%);
     font-family: "DM Serif Display", serif;
-    padding-top: 80px;
+    padding-top: 30px;
 }
 
 nav {
