@@ -1,8 +1,8 @@
 body {
     height: 3000px;
     background: linear-gradient(to bottom, #ffffff 0%, #888 51%, #0a0a0a 85%);
-    font-family: "DM Serif Display", serif;
-    padding-top: 30px;
+    font-family: "DM Sans", sans-serif;
+    padding-top: 50px;
 }
 
 nav {
@@ -12,18 +12,12 @@ nav {
     right: 0;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     backdrop-filter: blur(14px);
-    background: rgba(10, 10, 10, 0.6);
+    background: rgba(255, 255, 255, 0.6);
     justify-content: space-between;
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
-    height: 20px;
-}
-
-.left_nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+    height: 60px;
 }
 
 a {
@@ -31,11 +25,23 @@ a {
 }
 
 nav a {
-    color: #fff;
+    color: #000000;
     font-size: 12px;
     font-weight: 500;
     transition: color 0.3s ease;
-    padding: 10px 16px; 
+    padding: 0px 15px; 
     height: 100%;
+    align-self: center;
 }
 
+.museum_name a {
+    font-family: "DM Serif Display", serif;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 26px;
+}
