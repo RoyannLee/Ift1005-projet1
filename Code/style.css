@@ -1,8 +1,10 @@
 body {
-    height: 875px;
-    background: linear-gradient(to bottom, #ffffff 0%, #a3bcec 75%, #6292ec 89%);
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(to bottom, #ffffff 0%, #d5e4ff 55%, #191c82 89%);
     font-family: "DM Sans", sans-serif;
     padding-top: 50px;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -23,30 +25,43 @@ nav {
     z-index: 1000;
 }
 
-a {
-    text-decoration: none;
+ nav a:hover {
+    text-decoration: underline;
 }
+
+
 
 nav a {
     color: #000000;
     font-size: 12px;
     font-weight: 500;
-    transition: color 0.3s ease;
+
+    box-sizing: border-box;
+    transition: color 0.3s ease, rgba(0, 0, 0, 0.3) 0.3s ease;
     padding: 0px 15px; 
-    height: 100%;
-    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    /* height: 100%; */
 }
 
-.museum_name a {
-    font-family: "DM Serif Display", serif;
-    font-size: 24px;
+
+#museum_name a {
     color: #000000;
+    font-size: 24px;
     font-weight: 400;
+
+    font-family: "DM Serif Display", serif;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 26px;
+
+    height: 100%;
+    /* padding-top: 26px; */
+}
+
+a {
+    text-decoration: none;
 }
 
 .art_preview {
@@ -126,12 +141,52 @@ nav a {
 }
 
 #intro {
-    background-color: rgb(214, 228, 252);
+    /* background-color: rgb(214, 228, 252); */
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
+    margin: 40px;
+    text-align: justify;
 }
 
 footer {
     margin-top: auto;
+    margin-left: 20px;
     font-weight: 300;
+    color: white;
+}
+
+#artist {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 40px auto;
+    font-size: 15px;
+    line-height: 1.8;
+    height: auto;
+    width: 900px;
+}
+
+#artist h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    margin-top: 0;
+    /* margin-bottom: 20px; */
+    color: black;
+}
+
+#artist_description {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+#artist_description img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 10px;
 }
