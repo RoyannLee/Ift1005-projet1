@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <title>
         Visite étoilée-Visite-Contact
     </title>
@@ -19,45 +20,57 @@
             <a href="galerie.html">Galerie </a> &nbsp; 
         </div>
 
-        <div class="museum_name">
+        <div id="museum_name">
             <a href="index.html">Visite étoilée</a>
         </div>
 
         <div>
-            <a href="visite-contact.html">Contact </a>
+            <a href="visite-contact.html">Visite & Contact </a>
         </div>
 
     </nav>
     </header>
    
     <main>
-        <section class="infos-visite">
-            <h2>Informations de visite</h2>
-            <p>Horaires d'ouverture :</p>
-            <ul>
-                <li>Lundi au Vendredi : 8h00 - 18h00</li>
-                <li>Dimanche et samedi : 10h00 - 18h00</li>
-            </ul>
-            <p>Tarifs : </p>
-            <ul>
-                <li>Adulte: 15$</li>
-                <li>Étudiant: 10$</li>
-                <li>Enfant de 12 ans et moins: gratuit</li>
-            </ul>
-        </section>
+        <h1>Visite & Contact</h1>
+        <div class="container">
+            <section id="visite-info">
+                <div id="visite-content">
+                    <div id="visite-text">
+                        <h2>Informations de visite</h2>
+                        <h3>Visite étoilée</h3>
+                        <p id="address">123 Rue de l'Art, Marseille, France</p>
+                        <p>Horaires d'ouverture :</p>
+                        <ul>
+                            <li>Lundi au Vendredi : 8h00 - 18h00</li>
+                            <li>Dimanche et samedi : 10h00 - 18h00</li>
+                        </ul>
+                        <p>Tarifs :</p>
+                        <ul>
+                            <li>Adulte: 15$</li>
+                            <li>Étudiant: 10$</li>
+                            <li>Enfant de 12 ans et moins: gratuit</li>
+                        </ul>
+                    </div>
 
-        <section class="Contact">
-            <h2>Contact</h2>
-            <p>Téléphone: 123 456 7890</p>
-            <p>Courriel: <a href:nom@email.com>nom@email.com</a> </p>
-        </section>
+                    <img src="assets/address_faux.png" alt="Address image">
+                </div>
+            </section>           
+        </div>
+        
+        <div class="container">
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Téléphone: 123 456 7890</p>
+                <p>Courriel: <a href:nom@email.com>nom@email.com</a> </p>
+            </section>
+        </div>
 
-        
-        
         
     </main>
     <footer>
-            <p>&copy; 2026 Visite étoilée. Tous droits réservés</p>
-        </footer>
+        <hr>
+        <p>&copy; 2026 Visite étoilée. Tous droits réservés</p>
+    </footer>
 </body>
 </html>
