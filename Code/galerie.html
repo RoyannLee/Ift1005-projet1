@@ -3,70 +3,89 @@
 
 <head>
     <meta charset="UTF-8">
-     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">    
     <title>
-        Visite étoilée-Galerie
+        Visite étoilée
     </title>
     
 </head>
 <body>
+
     <header>
-        <nav >
+    <nav >
         <div>
             <a href="index.html">Accueil </a>  &nbsp; 
             <a href="oeuvres.html">Oeuvres </a> &nbsp; 
             <a href="galerie.html">Galerie </a> &nbsp; 
         </div>
 
-        <div class="museum_name">
+        <div id="museum_name">
             <a href="index.html">Visite étoilée</a>
         </div>
 
         <div>
-            <a href="visite-contact.html">Visite & Contact </a>
+            <a href="visite-contact.html">Contact </a>
         </div>
 
     </nav>
     </header>
-     
+
     <main>
-        <section class="grille-galerie">
+
+        <div class="art_preview">
+
+            <blockquote class="slogan"> &laquo;&nbsp; Il faut gâcher autant de toiles que l'on en réussit. &nbsp;&raquo; <div class="author">—Vincent van Gogh</div></blockquote>
+            <div class="artworks">
             
-            <figure class="galerie-item">
-                <img src="assets/starry_night.webp" alt="Description de l'image 1">
-                <figcaption>Nuit étoilées</figcaption>
-            </figure>
+                <div class="art">
+                    <map name="cafe_map">
+                        <area shape="default" href="oeuvres.html#cafe-terrace">
+                    </map>
+                    <img src="assets/cafe_terrace.jpeg" alt="Cafe artwork" usemap="#cafe_map">
+                </div>
 
-            <figure class="galerie-item">
-                <img src="assets/image2.jpg" alt="Description de l'image 2">
-                <figcaption>Autoportrait</figcaption>
-            </figure>
+                <div class="art">
+                    <map name="starry_night_map">
+                        <area shape="default" href="oeuvres.html#nuit-étoilée">
+                    </map>
+                    <img src="assets/starry_night.webp" alt="Starry Night artwork" usemap="#starry_night_map">
+                </div>
+                
+                <div class="art">
+                    <map name="sunflowers_map">
+                        <area shape="default" href="oeuvres.html#Tournesols">
+                    </map>
+                    <img src="assets/sunflowers.jpg" alt="Sunflowers artwork" usemap="#sunflowers_map">
+                </div>
+            </div>
+            
+        </div>
 
-            <figure class="galerie-item">
-                <img src="assets/sunflowers.jpg" alt="Description de l'image 3">
-                <figcaption>Les Tournesols</figcaption>
-            </figure>
+        <p id="intro">Bienvenue à l'exposition événement consacrée à Vincent van Gogh, figure majeure du postimpressionnisme. À travers un parcours visuel fascinant, redécouvrez l'évolution de son œuvre, de ses premiers croquis hollandais aux éclats vibrants de ses chefs-d'œuvre provençaux. Cette rétrospective vous invite à plonger au cœur de son génie créatif en admirant la texture unique de ses toiles emblématiques. Une expérience culturelle profondément émouvante qui célèbre le pouvoir de la couleur et de la lumière.</p>    
 
-            <figure class="galerie-item">
-                <img src="assets/image4.jpg" alt="Description de l'image 4">
-                <figcaption>Autoportrait à l'oreille bandée</figcaption>
-            </figure>
+        <section id="artist">
+            <h2>À propos de l'artiste</h2>
 
-            <figure class="galerie-item">
-                <img src="assets/image5.jpg" alt="Description de l'image 5">
-                <figcaption>Champs de blé sous un ciel de pluie</figcaption>
-            </figure>
+            <div id="artist_description">
+                <img src="assets/Vincent_van_Gogh.jpg" alt="Portrait de Vincent van Gogh" >
+                <p>
+                    Vincent van Gogh (1853&ndash;1890) était un peintre néerlandais onsidéré aujourd&apos;hui comme l&apos;une des figures les plus importantes de l&apos;histoire de l&apos;art. Au cours de sa vie, il a réalisé plus de 2 000 œuvres, dont environ 900 peintures. Pourtant, il n&apos;a vendu que très peu de tableaux de son vivant. Son œuvre est aujourd&apos;hui admirée dans le monde entier pour ses couleurs intenses, ses coups de pinceau expressifs et la profonde émotion qu&apos;elle transmet.
 
-            <figure class="galerie-item">
-                <img src="assets/image6.jpg" alt="Description de l'image 6">
-                <figcaption>La Chambre à Coucher</figcaption>
-            </figure>
+                    Van Gogh s&apos;inspire souvent de paysages, de scènes de la vie quotidienne et de portraits. Parmi ses œuvres les plus célèbres figurent La Nuit étoilée, Les Tournesols et La Chambre à coucher. À travers la couleur et le mouvement, il transforme des scènes ordinaires en images pleines de vie et d&apos;émotion.
 
+                    Malgré une vie marquée par des difficultés personnelles, Van Gogh a continué à peindre avec une grande passion. Son travail a profondément influencé l&apos;art moderne, notamment le mouvement de Expressionnisme. Aujourd&apos;hui, il est reconnu comme l&apos;un des artistes les plus importants et les plus émouvants de l&apos;histoire de l&apos;art.
+                </p>
+            </div>
+                
         </section>
+
     </main>
     <footer>
-            <p>&copy; 2026 Visite étoilée. Tous droits réservés</p>
+        <hr>
+        <p>&copy; 2026 Visite étoilée. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
+
