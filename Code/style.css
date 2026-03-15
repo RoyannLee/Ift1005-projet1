@@ -351,3 +351,263 @@ h3 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 0 8px 8px 0;
 }
+
+/* ============================
+   PAGE OEUVRES — Sections
+   ============================ */
+
+.section-oeuvre {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================
+   ANIMATION CARTEL — Shimmer / reflet lumineux
+   ============================ */
+
+@keyframes shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.cartel-ul,
+.cartel-ol {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 70%
+    );
+    background-size: 800px 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.8s ease-in-out infinite;
+}
+
+
+
+/* ============================
+   CAROUSEL — Les Tournesols
+   ============================ */
+
+/* ============================
+   CAROUSEL — Fondu entre slides (CSS pur)
+   ============================ */
+
+/* Cacher les inputs radio */
+.carousel input[type="radio"] {
+    display: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des slides empilées */
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 580px;
+}
+
+/* Toutes les slides empilées au même endroit */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slide active = visible */
+#slide1:checked ~ .carousel-track .carousel-slide:nth-child(1),
+#slide2:checked ~ .carousel-track .carousel-slide:nth-child(2),
+#slide3:checked ~ .carousel-track .carousel-slide:nth-child(3),
+#slide4:checked ~ .carousel-track .carousel-slide:nth-child(4) {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 520px;
+    object-fit: contain;
+    border: 10px solid #d4af37;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-slide figcaption {
+    text-align: center;
+    padding: 10px 0 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Boutons prev/next */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+    border: 2px solid #d4af37;
+    color: #0b1d3a;
+    font-size: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: rgba(212, 175, 55, 0.3);
+}
+
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+
+/* Afficher le bon bouton next selon la slide active */
+.carousel-next { display: none; }
+#slide1:checked ~ #next1 { display: flex; }
+#slide2:checked ~ #next2-pos { display: flex; }
+#slide3:checked ~ #next3-pos { display: flex; }
+#slide4:checked ~ #next4-pos { display: flex; }
+
+/* Dots de navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0 4px;
+}
+
+.carousel-dots label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: block;
+}
+
+#slide1:checked ~ .carousel-dots label[for="slide1"],
+#slide2:checked ~ .carousel-dots label[for="slide2"],
+#slide3:checked ~ .carousel-dots label[for="slide3"],
+#slide4:checked ~ .carousel-dots label[for="slide4"] {
+    background: #d4af37;
+    transform: scale(1.3);
+}
+
+/* Prev buttons — afficher le bon selon la slide active */
+.carousel-prev { display: none; }
+#slide1:checked ~ #prev1 { display: flex; }
+#slide2:checked ~ #prev2 { display: flex; }
+#slide3:checked ~ #prev3 { display: flex; }
+#slide4:checked ~ #prev4 { display: flex; }
+
+/* ============================
+   PAGE VISITE & CONTACT
+   ============================ */
+
+/* Icônes SVG cliquables */
+.contact-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #0b1d3a;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-link:hover {
+    transform: scale(1.15);
+    color: #d4af37;
+}
+
+.icon-link:hover .contact-svg rect,
+.icon-link:hover .contact-svg circle,
+.icon-link:hover .contact-svg path {
+    stroke: #191c82;
+}
+
+.icon-link:hover .contact-svg circle[r="1.2"],
+.icon-link:hover .contact-svg path {
+    fill: #191c82;
+}
+
+/* ============================
+   SVG ANIMÉ — Étoile
+   ============================ */
+
+.svg-anime-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0 10px;
+    position: relative;
+}
+
+/* Déplacement horizontal infini */
+@keyframes deplacerEtoile {
+    from { transform: translateX(-150px); }
+    to   { transform: translateX(calc(100vw + 150px)); }
+}
+
+/* Changement de couleur périodique */
+@keyframes changerCouleur {
+    0%   { fill: #d4af37; }
+    25%  { fill: #ffffff; }
+    50%  { fill: #191c82; }
+    75%  { fill: #aed0ff; }
+    100% { fill: #d4af37; }
+}
+
+.svg-etoile-animee {
+    animation: deplacerEtoile 6s linear infinite;
+    display: block;
+}
+
+.etoile-shape {
+    animation: changerCouleur 3s ease-in-out infinite;
+    fill: #d4af37;
+}

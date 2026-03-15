@@ -61,16 +61,45 @@
         <div class="container">
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Téléphone: 123 456 7890</p>
-                <p>Courriel: <a href:nom@email.com>nom@email.com</a> </p>
+                <p>Téléphone : <a href="tel:1234567890">123 456 7890</a></p>
+                <p>Courriel : <a href="mailto:contact@visite-etoilee.com">contact@visite-etoilee.com</a></p>
+
+                <!-- Deux icônes SVG cliquables vers des sites externes -->
+                <div class="contact-icons">
+                    <!-- Icône Instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="icon-link">
+                        <svg viewBox="0 0 24 24" width="40" height="40" class="contact-svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#d4af37" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="5" fill="none" stroke="#d4af37" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.2" fill="#d4af37"/>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <!-- Icône X -->
+                    <a href="https://www.x.com" target="_blank" class="icon-link">
+                        <svg viewBox="0 0 24 24" width="40" height="40" class="contact-svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#d4af37" stroke-width="2"/>
+                            <line x1="7" y1="7" x2="17" y2="17" stroke="#d4af37" stroke-width="2.2" stroke-linecap="round"/>
+                            <line x1="17" y1="7" x2="7" y2="17" stroke="#d4af37" stroke-width="2.2" stroke-linecap="round"/>
+                        </svg>
+                    <span>X</span>
+                    </a>
+                </div>
             </section>
         </div>
+        <!-- étoile qui se déplace horizontalement et change de couleur -->
+        <div class="svg-anime-container">
+            <svg viewBox="0 0 120 60" width="120" height="60" class="svg-etoile-animee">
+                <polygon 
+                    points="60,5 65,20 80,20 68,30 73,45 60,36 47,45 52,30 40,20 55,20"
+                    class="etoile-shape"
+                />
+            </svg>
+        </div>
 
-        
     </main>
     <footer>
-        <hr>
-        <p>&copy; 2026 Visite étoilée. Tous droits réservés</p>
+            <p>&copy; 2026 Visite étoilée. Tous droits réservés</p>
     </footer>
 </body>
 </html>

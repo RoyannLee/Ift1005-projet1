@@ -25,15 +25,15 @@
         </div>
 
         <div>
-            <a href="visite-contact.html">Contact </a>
+            <a href="visite-contact.html">Visite & Contact</a>
         </div>
 
     </nav>
     </header>
     
     <main>
-      <section id="oeuvres">  
-        <section id="nuit-étoilée">
+      <section id="oeuvres">
+        <section id="nuit-étoilée" class="section-oeuvre">
             <h2 class="titre-oeuvre">La Nuit étoilée</h2>
             
             <img src="assets/starry_night.webp" alt="Peinture de la Nuit étoilée de Van Gogh" class="image-oeuvre">
@@ -54,15 +54,57 @@
             </div>
         </section>
 
-        <section id="Tournesols">
+        <section id="Tournesols" class="section-oeuvre">
             <h2 class="titre-oeuvre">Les Tournesols</h2>
-            
-            <img src="assets/sunflowers.jpg" alt="Peinture Les Tournesols de Van Gogh" class="image-oeuvre">
-            
+
+            <!-- Carousel CSS pur avec cases radio -->
+            <div class="carousel">
+                <input type="radio" name="tournesols" id="slide1" checked>
+                <input type="radio" name="tournesols" id="slide2">
+                <input type="radio" name="tournesols" id="slide3">
+                <input type="radio" name="tournesols" id="slide4">
+
+                <div class="carousel-track">
+                    <figure class="carousel-slide">
+                        <img src="assets/sunflowers.jpg" alt="Tournesols — Fond jaune (National Gallery, Londres)">
+                        <figcaption>Toile 1 — Fond jaune · National Gallery, Londres</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="assets/Sunflowers(Munich).jpg" alt="Tournesols — Fond bleu vert (Neue Pinakothek, Munich)">
+                        <figcaption>Toile 2 — Fond bleu vert · Neue Pinakothek, Munich</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="assets/Sunflowers(London).jpg" alt="Tournesols — Fond jaune (National Gallery, Londres)">
+                        <figcaption>Toile 3 — Fond jaune · National Gallery, Londres</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="assets/Sunflowers(philadelphia).jpg" alt="Tournesols — Fond turquoise (Philadelphia Museum)">
+                        <figcaption>Toile 4 — Fond turquoise · Philadelphia Museum of Art</figcaption>
+                    </figure>
+                </div>
+
+                <div class="carousel-dots">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+
+                <label for="slide4" class="carousel-prev" id="prev1">&#8249;</label>
+                <label for="slide1" class="carousel-prev" id="prev2">&#8249;</label>
+                <label for="slide2" class="carousel-prev" id="prev3">&#8249;</label>
+                <label for="slide3" class="carousel-prev" id="prev4">&#8249;</label>
+
+                <label for="slide2" class="carousel-next" id="next1">&#8250;</label>
+                <label for="slide3" class="carousel-next" id="next2-pos">&#8250;</label>
+                <label for="slide4" class="carousel-next" id="next3-pos">&#8250;</label>
+                <label for="slide1" class="carousel-next" id="next4-pos">&#8250;</label>
+            </div>
+
             <div class="description">
                 <p>Les Tournesols est le nom attribué à chacune des deux séries de natures mortes composées de plusieurs toiles exécutées par le peintre néerlandais Vincent van Gogh. La première série, exécutée à Paris en 1887, représente des fleurs posées sur le sol. La deuxième série, exécutée un an plus tard à Arles, montre des bouquets de tournesols dans un vase. Ces toiles sont célèbres pour leur utilisation novatrice des teintes jaunes et de la technique de l'empâtement.</p>
             </div>
-            
+
             <div class="cartel-ol">
                 <h3>Série d'Arles (Août 1888)</h3>
                 <ol>
@@ -74,7 +116,7 @@
             </div>
         </section>
 
-    <section id="cafe-terrace">
+    <section id="cafe-terrace" class="section-oeuvre">
     <h2 class="titre-oeuvre">Terrasse du café le soir</h2>
             
     <img src="assets/cafe_terrace.jpeg" alt="Peinture Terrasse du café le soir de Vincent van Gogh" class="image-oeuvre">
