@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    min-height: 100px;
     height: auto;
     background: linear-gradient(to bottom, #ffffff 0%, #d5e4ff 55%, #191c82 89%);
     font-family: "DM Sans", sans-serif;
@@ -315,10 +315,6 @@ h3 {
     border-radius: 0 8px 8px 0;
 }
 
-/* ============================
-   PAGE OEUVRES — Sections
-   ============================ */
-
 .section-oeuvre {
     padding: 60px 40px;
     max-width: 900px;
@@ -329,7 +325,6 @@ h3 {
     border-radius: 14px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
-
 
 
 /*Animation cartel*/
@@ -353,11 +348,7 @@ h3 {
     animation: shimmer 2.8s ease-in-out infinite;
 }
 
-
-
-
-
-/* Cacher les inputs radio */
+/* cacher les inputs radio */
 .carousel input[type="radio"] {
     display: none;
 }
@@ -459,7 +450,7 @@ h3 {
 #slide3:checked ~ #next3-pos { display: flex; }
 #slide4:checked ~ #next4-pos { display: flex; }
 
-/* Dots de navigation */
+/* Points de navigation en-dessous carousel*/
 .carousel-dots {
     display: flex;
     justify-content: center;
@@ -492,9 +483,6 @@ h3 {
 #slide3:checked ~ #prev3 { display: flex; }
 #slide4:checked ~ #prev4 { display: flex; }
 
-/* ============================
-   PAGE VISITE & CONTACT
-   ============================ */
 
 /* Icônes SVG cliquables */
 .contact-icons {
@@ -531,10 +519,6 @@ h3 {
     fill: #191c82;
 }
 
-/* ============================
-   SVG ANIMÉ — Étoile
-   ============================ */
-
 .svg-anime-container {
     width: 100%;
     overflow: hidden;
@@ -567,10 +551,9 @@ h3 {
     fill: #d4af37;
 }
 
-
+/* Partie Tablette */
 @media (max-width: 768px) {
 
-    /* Nav */
     nav {
         flex-wrap: wrap;
         height: auto;
@@ -584,8 +567,10 @@ h3 {
         justify-content: center;
     }
 
+    /* Garder le titre en haut de tout 
+    et prend toute la largeur*/
     #museum_name {
-        order: -1;
+        order: -1; 
         flex-basis: 100%;
         text-align: center;
     }
@@ -595,13 +580,11 @@ h3 {
         transform: none;
         height: auto;
         font-size: 20px;
-        order: -1;
         width: 100%;
-        text-align: center;
         padding: 4px 0;
+        display: block;
     }
 
-    /* Hero banner */
     .art_preview {
         height: 260px;
     }
@@ -611,7 +594,6 @@ h3 {
         padding: 0 20px;
     }
 
-    /* Artist section */
     .container.artist {
         width: auto;
         margin: 20px;
@@ -626,10 +608,11 @@ h3 {
     #artist_description img {
         width: 100%;
         max-height: 320px;
-        object-fit: cover;
+        /* garder les proportions de l'image */
+        object-fit: contain; 
     }
 
-    /* Visite & Contact */
+    /* stack verticalement */
     #visite-content {
         flex-direction: column;
     }
@@ -639,14 +622,12 @@ h3 {
         height: auto;
     }
 
-    /* Gallery grid: 2 columns on tablet */
     .grille-galerie {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 20px;
     }
 
-    /* Oeuvres sections */
     .section-oeuvre {
         padding: 30px 20px;
         margin: 10px 15px 20px 15px;
@@ -660,13 +641,13 @@ h3 {
         height: auto;
     }
 
-    /* Carousel */
     .carousel-track {
         height: auto;
         min-height: 400px;
     }
 }
 
+/* Partie mobile */
 @media (max-width: 480px) {
 
     body {
@@ -674,45 +655,38 @@ h3 {
     }
 
     nav {
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         height: auto;
         padding: 10px 0;
-        /* gap: 8px; */
     }
 
+    /* Pas de place en mobile, mieux stack verticalement */
+    #museum_name {
+        order: -1; 
+        flex-basis: 100%;
+        text-align: center;
+    }
 
     #museum_name a {
         position: static;
         transform: none;
         height: auto;
         font-size: 20px;
-        order: -1;
         width: 100%;
-        text-align: center;
         padding: 4px 0;
-        justify-content: center;
     }
 
-    nav > div:first-child,
-    nav > div:last-child {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
 
     body {
-        padding-top: 110px; /* compensate for taller nav */
+        padding-top: 110px; /* plus grand nav */
     }
 
-    /* Nav: stack links */
     nav a {
         font-size: 11px;
         padding: 0 8px;
     }
 
-    /* Hero: stack images vertically */
     .artworks {
         flex-direction: column;
     }
@@ -758,14 +732,10 @@ h3 {
         font-size: 14px;
     }
 
-    /* Gallery: 1 column on mobile */
     .grille-galerie {
         grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 15px;
     }
 
-    /* Titles */
     .titre-oeuvre {
         font-size: 26px;
     }
@@ -782,7 +752,6 @@ h3 {
         font-size: 18px; 
     }
 
-    /* Carousel */
     .carousel-track {
         height: auto;
         min-height: 350px;
@@ -804,7 +773,6 @@ h3 {
         font-size: 20px;
     }
 
-    /* Contact icons */
     .contact-icons {
         flex-wrap: wrap;
         gap: 16px;
