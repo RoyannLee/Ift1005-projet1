@@ -562,10 +562,6 @@ h3 {
         justify-content: center;
     }
 
-    nav > div:not(#museum_name) {
-        display: flex;
-        justify-content: center;
-    }
 
     /* Garder le titre en haut de tout 
     et prend toute la largeur*/
@@ -586,6 +582,7 @@ h3 {
     }
 
     .art_preview {
+        padding-top: 60px;
         height: 260px;
     }
 
