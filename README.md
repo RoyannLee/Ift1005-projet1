@@ -2,6 +2,9 @@
 
 Royann Brady Heriniaina Lee (20286513)
 
+Trinh Ngo (20228204)
+
+
 ## Source des images:
 
 -La chambre: https://www.reddit.com/r/Art/comments/8zklnb/the_bedroom_in_arles_vincent_van_gogh_1888/?tl=fr
