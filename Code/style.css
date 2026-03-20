@@ -24,7 +24,11 @@ nav {
     padding: 0px 20px;
     backdrop-filter: blur(14px);
     background: rgba(255, 255, 255, 0.6);
-    justify-content: space-between;
+
+    /* espacer les éléments de div pour avoir une partie de navigation vers la gauche et l'autre vers la droite */
+    justify-content: space-between; 
+
+    /* ombre en dessous commme s'il flotte */
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
     height: 60px;
     z-index: 1000;
@@ -70,9 +74,9 @@ a {
     position: relative;
     width: 100%;
     height: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    overflow: hidden; /* eviter les débordements de depasser height */
+    display: flex; /* sans flex, deplacement bizarre des images */
+    align-items: center; /* centrer le contenant avec les 3 images */
     justify-content: center;
 }
 
@@ -109,7 +113,7 @@ a {
     font-family: "DM Serif Display", serif;
     font-size: 50px;
     font-weight: 700;
-    pointer-events: none;
+    pointer-events: none; /* permet de cliquer à travers le slogan pour interagir avec les images en dessous */
     z-index: 1;
 }
 
@@ -122,8 +126,8 @@ a {
     font-weight: 400;
     top: 100%;
     left: 35%;
-    transform: translate(50%, 50%);
-    pointer-events: none;
+    transform: translate(50%, 50%); /* deplacement bizarre du nom, pas centrer */
+    pointer-events: none; /* permet de cliquer à travers le slogan pour interagir avec les images en dessous */
     z-index: 1;
 }
 
@@ -139,7 +143,7 @@ a {
     padding: 40px 20px;
     margin: 40px auto;
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.8; /* plus d'espace entre les lignes */
     height: auto;
     width: 900px;
 }
@@ -161,8 +165,7 @@ a {
 #artist_description img {
     width: auto;
     height: auto;
-    object-fit: contain;
-    flex-shrink: 0;
+    object-fit: contain; /* garder les proportions de l'image */
     border-radius: 10px;
 }
 
@@ -178,9 +181,9 @@ a {
 }
 
 #visite-info img{
-    width: auto;
+    /* width: auto; */
     height: 400px;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 10px;
     flex-shrink: 0;
 }
@@ -556,6 +559,7 @@ h3 {
 
 /* Partie Tablette */
 @media (max-width: 768px) {
+    
 
     nav {
         flex-wrap: wrap;
@@ -565,6 +569,9 @@ h3 {
         justify-content: center;
     }
 
+    h1{
+        padding-top: 30px; /* sinon il va etre cache en arriere le nav */
+    }
 
     /* Garder le titre en haut de tout 
     et prend toute la largeur*/
@@ -582,7 +589,7 @@ h3 {
     }
 
     .art_preview {
-        padding-top: 65px;
+        padding-top: 75px;
         height: 260px; /* Pour eviter d'avoir un espace vide en dessus */
     }
 
@@ -672,6 +679,7 @@ h3 {
     }
 
     .art_preview {
+        padding-top: 60px;
         height: auto;
         flex-direction: column;
     }
@@ -683,15 +691,7 @@ h3 {
     }
 
     .author {
-        position: static;
-        transform: none;
-        text-align: right;
         padding: 4px 16px 10px;
-    }
-
-    .container {
-        margin: 15px;
-        padding: 15px;
     }
 
     .container.artist {
@@ -709,6 +709,7 @@ h3 {
     }
 
     h1 { 
+        padding-top: 50px; /* sinon il va etre cache en arriere le nav */
         font-size: 28px; 
     }
 
