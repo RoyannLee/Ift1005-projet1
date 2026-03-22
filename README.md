@@ -7,6 +7,8 @@ Trinh Ngo (20228204)
 
 ## Source des images:
 
+Toutes les peintures présentées sur ce site sont l'œuvre de **Vincent van Gogh**. Étant donné la date de création de ces toiles, elles appartiennent toutes au **Domaine public**.
+
 -La chambre: https://www.reddit.com/r/Art/comments/8zklnb/the_bedroom_in_arles_vincent_van_gogh_1888/?tl=fr
 
 -autoportrait : https://fr.wikiquote.org/wiki/Fichier:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg
